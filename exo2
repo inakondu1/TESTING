@@ -1,0 +1,86 @@
+
+
+while True: word = input("Enter text ('exit'): ")
+
+if word.lower() == 'exit':
+    break  # This works fine
+
+if len(word) == 0:
+    continue
+
+# Remove non-alphanumeric characters and make lowercase
+word = "".join(c.lower() for c in word if c.isalnum())
+is_palindrome = True
+
+for i in range(len(word) // 2):
+    front = word[i]
+    back = word[len(word) - 1 - i]
+
+    if front != back:  # <-- must be indented inside the loop
+        print("No, it is not a palindrome")
+        print(f"Stopped at: '{front}' vs '{back}'")
+        print(f"Position: {i}")
+        is_palindrome = False
+        break  # This breaks out of the for-loop correctly
+
+if is_palindrome:
+    print("Yes, it is a palindrome")
+
+"I modified my palindrome function to handle more cases.
+
+Did I miss anything? Can it be more efficient?"
+
+Missing Edge Cases
+
+Even with your modifications, there are two "sneaky" cases to watch for:
+
+The "Cleaned to Nothing" Case: If a user enters only punctuation (e.g., "!@#$"), your filter removes everything. The word becomes empty, and the code will incorrectly say "Yes, it is a palindrome" because an empty string technically reads the same backward.
+
+    Fix: Check the length of the string after you clean it.
+
+Case Sensitivity (Input): You handled this well with .lower(), but always ensure the "exit" command and the palindrome check use the same casing logic.
+
+    Efficiency & Complexity
+
+    Time Complexity (O(n)): Your use of len(word) // 2 is excellent. It ensures you only do half the work, stopping exactly at the middle.
+
+    Memory Efficiency: Your current code creates a new copy of thprint("Hello, welcome")
+
+while True: word = input("enter text ('exit'): ")
+
+if word.lower() == 'exit':
+    break
+
+if len(word) == 0:
+    continue
+
+word = "".join(c.lower() for c in word if c.isalnum())
+is_palindrome = True
+
+for i in range(len(word) // 2):
+    front = word[i]
+    back = word[len(word) - 1 - i]
+
+    if front != back:
+        print("No, it is not a palindrome")
+        print(f"Stopped at: '{front}' vs '{back}'")
+        print(f"Position: {i}")
+        is_palindrome = False
+        break
+
+if is_palindrome:
+    print("Yes, it is a palindrome")
+
+print("Goodbye, Have a great day.") e string during the "".join() phase. This is fine for sentences, but for a 100MB text file, it would double the memory usage.
+
+    The "Pro" Alternative: You can use a Two-Pointer Approach to skip non-alphanumeric characters "on the fly" without creating a new string.
+
+    The Corrected & Formatted Code
+
+Here is your code with the indentation fixed, the "empty string" edge case handled, and the break logic properly nested.
+
+Reflect on what AI added that you didn't consider initially.
+
+actually, most of the things AI added, i had the idea but dint know how to go about it so i prompt AI to add it. 
+  1. telling the number the stopped being a palindrome
+  2. stating the letters that end the palindrome.
