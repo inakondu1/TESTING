@@ -1,0 +1,161 @@
+
+Write pseudocode for a function that checks if a string is a palindrome.
+
+BEGIN
+
+INPUT word
+
+SET reversedword = reverse(word)
+
+IF word EQUALS reversedword THEN
+
+PRINT "yes, it is a palindrome"
+
+ELSE
+
+PRINT "no, it is not a palindrome"
+
+END IF
+
+END
+Implement your solution in Python.
+
+word = input("mum:") reversed_word = word[::-1] if word == reversed_word: print("yes, it is a palindrome") else: print("no,it is not a palindrome")
+
+Test with examples like "racecar", "hello", and "A man a plan a canal Panama"
+
+
+             (racecar)
+
+ word = input("Enter any word: ")
+ reversed_word = word[::-1]
+ if word == reversed_word:
+   print("yes, it is a palindrome")
+ else:
+   print("no, it is not a palindrome")
+
+once you click on run, it will tell you to enter a word, from the word you input will determine if it is a palindrom or not. here, the word i enter is racecar. yes, it is a palindrome
+
+   (hello)
+
+   word = input("enter any word ")
+ reversed_word = word[:: - 1]
+
+if word == reversed_word: print("yes, it is a palindrome") else: print("no, it is not a palindrome")
+
+ in this code, the word in inputed is hello
+
+no, it is not a palindrome
+
+  word = input("enter any word")
+
+reversed_word = word[:: - 1] if word == reversed_word: print("yes, it is a palindrome") else: print("no, it is not a palindrome")
+
+
+  
+  
+in this code, the word i inputed is a man a plan a canal panama
+yes, it is a palindrome
+
+
+
+### 4. add comment explaining your reasons.
+
+\# i want the user to enter any word of their choice by creating an avenu for "enter any word"
+word = input("enter any word ")
+
+\# if you look at the line above the words in the bracket, after "enter any number  they was a spaace befor the clossing double quotation. by this, when you are asked to input your words, they should be space. but had it been i added the quotation immediately, the words must come immediately without space.
+
+\# i will be using the "reversed" statement sinece i want to know if the word is spelled backword, it will stil come out as same word.
+reversed_word = word[::-1]
+if word == reversed_word:
+
+\# here, it is giving instruction to do base on the word inputed
+  print("yes, it is a palindrome")
+else:
+  print("no, it is not a palindrome")
+
+
+
+
+                        STEP 2
+Now that your function works, use AI to go deeper:
+"I wrote a palindrome function. 
+
+            Here's my code:
+
+```while True:
+    word = input()
+    
+    word = "".join(c.lower() for c in word if c.isalnum())
+
+    if word == wordd[::-1]:
+        print("yes")
+    else:
+        print("no")
+
+
+
+         ###   What's the time complexity?
+
+
+
+my code takes a bit of time and a step before bringing out the actuall output. if the word has 20 letters, it will go throught each leaters before bringing out the output. also,  after runing the code  it will give an instruction to enter any word.
+but the ai assisted code, the output wil pulp out immediately.
+
+           ###  What edge cases might I miss?
+            
+
+  my code is very sensitive, if a word like "Madam" is inputed, it says it is not a palindrome. 
+   aslo, in my code if "enter any word" and the double quotation is closed imediately, if i am ask to input word and i gave room for a space even if it is a palindrom, it will print "not a palindrome" like wise if "enter any word " and i am told to put word, if i dnt space it, it will print not a palindrom even if it is.
+      But the ai assisted is not like that. its is easier and faster.
+
+
+
+              ###  Are there better approaches?
+
+
+
+
+ Yes, they are better approaches. for instance, if i combine my code and the AI assited code, i will get another code 
+
+```py
+while True:
+    word = input("Enter a word (or 'exit'): ")
+    
+    if word.lower() == 'exit':
+        break
+        
+    word = "".join(c.lower() for c in word if c.isalnum())
+
+    if word == word[::-1]:
+        print("Yes, it is a palindrome")
+    else:
+        print("No, it is not")
+
+print("Goodbye, Have a great day.")
+
+Step 3 Reflection
+
+###  What did you learn from solving it before asking AI?
+
+
+
+ i learnt that reversed_word doesent walk properly without the python reverse formula [::-1]
+ i taught it has to be  a word at a time but realised multiples words can be inputed
+ i learnt that code are sensitive to spelling, puntuations
+
+How is your understanding different now?
+
+ my understanding is different in the aspect of using python. i have never use python before but this has made me have an idea about how python works.
+ in python, missing a colon can stop it from running
+ my understanding for loop has inceased.
+ :: i am ment to understand that this is a start and stop
+
+
+
+
+ ### Could you now write similar functions (e.g., reverse a string) without help?
+
+ yes i can attempt reverse code with confidence.
+
